@@ -28,18 +28,8 @@ const Hero = () => {
           </div>
           <div>
             <div className="shot-wrap">
-              <div className="shot-badge">
-                <span className="dot"></span>
-                <span>ONLINE · SA 2</span>
-              </div>
               <div className="shot">
                 <img src={(window.__resources && window.__resources.headshot) || "assets/headshot.jpg"} alt="Victor Sibanda" />
-                <div className="shot-meta">
-                  <div className="loc">
-                    <Icon name="pin" size={12} />
-                    <span>SAN GIMIGNANO · IT</span>
-                  </div>
-                </div>
               </div>
               <span className="shot-corner tl"></span>
               <span className="shot-corner tr"></span>
