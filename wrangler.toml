@@ -2,6 +2,8 @@ name = "victorsibanda-dev"
 compatibility_date = "2026-04-17"
 workers_dev = true
 preview_urls = true
+main = "worker.js"
 
 [assets]
 directory = "."
+binding = "ASSETS"

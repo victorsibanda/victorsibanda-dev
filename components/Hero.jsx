@@ -39,7 +39,6 @@ const Hero = () => {
                     <Icon name="pin" size={12} />
                     <span>SAN GIMIGNANO · IT</span>
                   </div>
-                  <div>VS · 24</div>
                 </div>
               </div>
               <span className="shot-corner tl"></span>

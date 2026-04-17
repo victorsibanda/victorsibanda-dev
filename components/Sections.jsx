@@ -6,7 +6,7 @@ const Certs = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://www.credly.com/users/victor-sibanda.a63512d6/badges.json')
+    fetch('/api/badges')
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(json => {
         const data = json && json.data;
