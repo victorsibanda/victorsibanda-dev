@@ -1,2 +1,5 @@
 name = "victorsibanda-dev"
-assets = { directory = "." }
+compatibility_date = "2026-04-17"
+
+[assets]
+directory = "."
