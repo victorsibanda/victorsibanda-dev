@@ -7,7 +7,7 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
     { id: 'projects', label: 'Projects', num: '04' },
     { id: 'experience', label: 'Experience', num: '05' },
     { id: 'interests', label: 'Interests', num: '06' },
-    { id: 'contact', label: 'Contact', num: '07' }
+    { id: 'contact', label: 'Contact', num: '07' },
   ];
 
   const jump = (e, id) => {
@@ -25,10 +25,13 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
         <span className="dot"></span>
         <span className="name">V.Sibanda</span>
       </a>
-      {items.slice(1).map(it => (
-        <a key={it.id} href={`#${it.id}`}
-           className={`link ${activeSection === it.id ? 'active' : ''}`}
-           onClick={(e) => jump(e, it.id)}>
+      {items.slice(1).map((it) => (
+        <a
+          key={it.id}
+          href={`#${it.id}`}
+          className={`link ${activeSection === it.id ? 'active' : ''}`}
+          onClick={(e) => jump(e, it.id)}
+        >
           <span className="num">{it.num}</span>
           <span>{it.label}</span>
         </a>
@@ -41,3 +44,4 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
 };
 
 window.Nav = Nav;
+export { Nav };

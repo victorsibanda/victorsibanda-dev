@@ -1,13 +1,12 @@
-const ALLOWED_IPS = ['31.104.125.0'];
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // IP whitelist — clear ALLOWED_IPS to open publicly
-    if (ALLOWED_IPS.length > 0) {
+    // IP allowlist — set MY_IP secret in Cloudflare to restrict access; unset = open
+    const allowedIp = env.MY_IP || '';
+    if (allowedIp) {
       const ip = request.headers.get('CF-Connecting-IP') || '';
-      if (!ALLOWED_IPS.includes(ip)) {
+      if (ip !== allowedIp) {
         return new Response('Access restricted', { status: 403 });
       }
     }

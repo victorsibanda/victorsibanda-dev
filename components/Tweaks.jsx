@@ -2,11 +2,16 @@
 const Tweaks = ({ editMode, play, setPlay }) => {
   if (!editMode) return null;
 
-  const level = play < 0.15 ? 'SUIT MODE'
-    : play < 0.4 ? 'NORMAL'
-    : play < 0.65 ? 'SUPER SAIYAN'
-    : play < 0.85 ? 'SSJ 2'
-    : 'EVEN FURTHER BEYOND';
+  const level =
+    play < 0.15
+      ? 'SUIT MODE'
+      : play < 0.4
+        ? 'NORMAL'
+        : play < 0.65
+          ? 'SUPER SAIYAN'
+          : play < 0.85
+            ? 'SSJ 2'
+            : 'EVEN FURTHER BEYOND';
 
   return (
     <div className="tweaks-panel open">
@@ -26,10 +31,15 @@ const Tweaks = ({ editMode, play, setPlay }) => {
         onChange={(e) => setPlay(Number(e.target.value) / 100)}
       />
       <div className="hint">
-        Slide from <span className="mono">subtle</span> → <span className="mono" style={{ color: 'var(--accent)' }}>full anime</span>. Affects background scanlines, hero glitch, and a little easter egg.
+        Slide from <span className="mono">subtle</span> →{' '}
+        <span className="mono" style={{ color: 'var(--accent)' }}>
+          full anime
+        </span>
+        . Affects background scanlines, hero glitch, and a little easter egg.
       </div>
     </div>
   );
 };
 
 window.Tweaks = Tweaks;
+export { Tweaks };

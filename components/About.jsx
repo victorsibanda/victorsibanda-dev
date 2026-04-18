@@ -12,20 +12,27 @@ const About = () => {
         <div className="about-grid">
           <div>
             <p className="about-lead">
-              {d.about.lead}<em>{d.about.leadEm}</em>
+              {d.about.lead}
+              <em>{d.about.leadEm}</em>
             </p>
             <p>
-              I care about the craft — clean abstractions, kind docs, dashboards that tell you what went wrong before you open Slack. I build platforms that make the next engineer's week easier, not shinier.
+              I care about the craft — clean abstractions, kind docs, dashboards that tell you what
+              went wrong before you open Slack. I build platforms that make the next engineer's week
+              easier, not shinier.
             </p>
             <p>
-              Outside the terminal you'll find me at the squat rack, on the couch with my kid and a controller, or deep in a manga chapter trying to figure out what Luffy's cooking next.
+              Outside the terminal you'll find me at the squat rack, on the couch with my kid and a
+              controller, or deep in a manga chapter trying to figure out what Luffy's cooking next.
             </p>
           </div>
           <div className="stat-grid">
-            {d.about.stats.map(s => (
+            {d.about.stats.map((s) => (
               <div className="stat" key={s.k}>
                 <div className="k">{s.k}</div>
-                <div className="v">{s.v}<span className="u">{s.u}</span></div>
+                <div className="v">
+                  {s.v}
+                  <span className="u">{s.u}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -48,10 +55,12 @@ const Interests = () => {
           <span className="bar"></span>
         </div>
         <div className="tile-grid">
-          {d.interests.map(i => (
+          {d.interests.map((i) => (
             <div className="tile" key={i.title}>
               <div className="tag">{i.tag}</div>
-              <div className="icon"><Icon name={i.icon} size={16} /></div>
+              <div className="icon">
+                <Icon name={i.icon} size={16} />
+              </div>
               <div>
                 <h4>{i.title}</h4>
                 <p>{i.body}</p>
@@ -65,3 +74,4 @@ const Interests = () => {
 };
 
 window.Interests = Interests;
+export { About, Interests };

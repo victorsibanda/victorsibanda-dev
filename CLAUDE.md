@@ -6,14 +6,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal portfolio website deployed as a Cloudflare Worker. It's a zero-build React SPA — React 18 and Babel are loaded from CDN and JSX is compiled at runtime in the browser. There is no bundler, no npm, and no build step.
 
-## Deployment
+## Development
+
+```bash
+npm install            # First-time setup (devDependencies only — runtime stays CDN-based)
+npm run format         # Format all JS/JSX with Prettier
+npm run format:check   # Dry-run format check (use in CI)
+npm test               # Run all unit tests once
+npm run test:watch     # Run tests in watch mode
+```
 
 ```bash
 wrangler deploy        # Deploy to Cloudflare Workers
 wrangler dev           # Local dev server
+wrangler secret put MY_IP  # Set IP allowlist secret (unset = open access)
 ```
-
-No lint, test, or build commands exist — this is intentional.
 
 ## Architecture
 
@@ -28,6 +35,7 @@ No lint, test, or build commands exist — this is intentional.
 
 ## Key Behaviours
 
-- **IP allowlist**: `worker.js` restricts access to a hardcoded list of CIDR blocks. Update the `ALLOWED_IPS` constant there to change access control.
+- **IP allowlist**: `worker.js` reads `env.MY_IP` (a Cloudflare secret). If the secret is set, only that IP is allowed. Unset = open access. Set with `wrangler secret put MY_IP`.
 - **Credly badge proxy**: `GET /api/badges` in `worker.js` fetches from the Credly API server-side to avoid CORS issues. The Credly username is hardcoded in that handler.
-- **No JSX compilation offline**: Components use standard JSX syntax but rely on the browser's Babel standalone for compilation — do not try to run or lint them as plain JS.
+- **No JSX compilation offline**: Components use standard JSX syntax but rely on the browser's Babel standalone for compilation. Vitest handles JSX via `@vitejs/plugin-react` for tests only.
+- **Global pattern**: Components export to both `window.ComponentName` (browser) and as ES module exports (tests). The `Icon` component must be registered as `global.Icon` in `tests/setup.js` since other components reference it as a bare global.
