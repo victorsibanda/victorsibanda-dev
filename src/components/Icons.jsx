@@ -1,4 +1,5 @@
-// Icon set (inline SVGs)
+import { cloneElement } from 'react';
+
 const Icon = ({ name, size = 16 }) => {
   const icons = {
     sun: (
@@ -232,7 +233,7 @@ const Icon = ({ name, size = 16 }) => {
   };
   return (
     <span style={{ display: 'inline-flex', width: size, height: size }}>
-      {React.cloneElement(icons[name] || icons.code, { width: size, height: size })}
+      {cloneElement(icons[name] || icons.code, { width: size, height: size })}
     </span>
   );
 };
