@@ -117,12 +117,17 @@ button {
 }
 
 /* nav */
-.nav {
+.nav-container {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -133,6 +138,62 @@ button {
   border: 1px solid var(--border);
   border-radius: 999px;
   box-shadow: var(--shadow);
+}
+.nav .nav-links {
+  display: contents;
+}
+.nav .hamburger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  place-items: center;
+  color: var(--text-dim);
+  transition: color 0.15s, background 0.15s;
+  margin-left: 4px;
+  border-left: 1px solid var(--border);
+  padding-left: 4px;
+  box-sizing: content-box;
+}
+.nav .hamburger:hover {
+  color: var(--accent);
+}
+.nav-mobile-menu {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  background: color-mix(in oklab, var(--card) 90%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 180px;
+}
+.nav-mobile-menu .link {
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text-dim);
+  transition: color 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-mobile-menu .link:hover {
+  color: var(--text);
+  background: var(--card-2);
+}
+.nav-mobile-menu .link.active {
+  color: var(--text);
+  background: var(--card-2);
+}
+.nav-mobile-menu .link .num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-mute);
 }
 .nav .brand {
   display: flex;
@@ -201,6 +262,8 @@ button {
   }
   .nav {
     gap: 0;
+  }
+  .nav-container {
     top: 12px;
   }
   .nav a.link {
@@ -208,7 +271,13 @@ button {
     font-size: 13px;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 640px) {
+  .nav .nav-links {
+    display: none;
+  }
+  .nav .hamburger {
+    display: grid;
+  }
   .nav .brand span.name {
     display: none;
   }
