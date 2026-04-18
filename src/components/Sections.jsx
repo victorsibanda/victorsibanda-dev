@@ -136,13 +136,21 @@ export const Projects = () => {
             <div className="proj" key={p.idx}>
               <div className="idx">{p.idx}</div>
               <div>
-                <h3>{p.name}</h3>
+                <h3>
+                  {p.name}
+                  {p.aiBuilt === true && (
+                    <span className="proj-star">
+                      <span>★</span>
+                      <span>this project</span>
+                    </span>
+                  )}
+                </h3>
               </div>
               <div>
                 <div className="desc">{p.desc}</div>
                 <div className="stack" style={{ marginTop: 10, justifyContent: 'flex-start' }}>
                   {p.stack.map((s) => (
-                    <span className="chip" key={s}>
+                    <span className={`chip${p.aiBuilt === true && s === 'Claude' ? ' chip--ai' : ''}`} key={s}>
                       {s}
                     </span>
                   ))}

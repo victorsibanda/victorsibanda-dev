@@ -133,6 +133,12 @@ const Projects = () => {
         <div className="proj-list">
           {d.projects.map((p) => (
             <div className="proj" key={p.idx}>
+              {p.aiBuilt === true && (
+                <div className="proj-star">
+                  <span>★</span>
+                  <span>this project</span>
+                </div>
+              )}
               <div className="idx">{p.idx}</div>
               <div>
                 <h3>{p.name}</h3>
@@ -141,7 +147,7 @@ const Projects = () => {
                 <div className="desc">{p.desc}</div>
                 <div className="stack" style={{ marginTop: 10, justifyContent: 'flex-start' }}>
                   {p.stack.map((s) => (
-                    <span className="chip" key={s}>
+                    <span className={`chip${p.aiBuilt === true && s === 'Claude' ? ' chip--ai' : ''}`} key={s}>
                       {s}
                     </span>
                   ))}
