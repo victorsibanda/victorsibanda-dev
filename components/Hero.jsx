@@ -13,7 +13,7 @@ const Hero = () => {
             <h1>
               Cloud <span className="accent">architect</span>
               <br />+ platform <span className="accent-2">engineer</span>
-              <span className="power-badge play-text">LVL ∞ · going beyond</span>
+              <span className="power-badge play-text">LVL &infin; &middot; going beyond</span>
             </h1>
             <p className="tagline">{d.tagline}</p>
             <div className="hero-cta">
@@ -70,18 +70,18 @@ const Hero = () => {
       <div className="ticker">
         <div className="ticker-track">
           <span>
-            AZURE <span className="sep">+</span> AWS <span className="sep">+</span> KUBERNETES{' '}
-            <span className="sep">+</span> TERRAFORM <span className="sep">+</span> PLATFORM
-            ENGINEERING <span className="sep">+</span> FINOPS <span className="sep">+</span>{' '}
-            OBSERVABILITY <span className="sep">+</span> ZERO-TRUST <span className="sep">+</span>{' '}
-            DEVELOPER EXPERIENCE <span className="sep">◆</span>
+            AZURE <span className="sep">+</span> AWS <span className="sep">+</span> AWS CDK{' '}
+            <span className="sep">+</span> IaC <span className="sep">+</span> PLATFORM ENGINEERING{' '}
+            <span className="sep">+</span> FINOPS <span className="sep">+</span> OBSERVABILITY{' '}
+            <span className="sep">+</span> ZERO-TRUST <span className="sep">+</span> DEVELOPER
+            EXPERIENCE <span className="sep">&#9670;</span>
           </span>
           <span aria-hidden="true">
-            AZURE <span className="sep">+</span> AWS <span className="sep">+</span> KUBERNETES{' '}
-            <span className="sep">+</span> TERRAFORM <span className="sep">+</span> PLATFORM
-            ENGINEERING <span className="sep">+</span> FINOPS <span className="sep">+</span>{' '}
-            OBSERVABILITY <span className="sep">+</span> ZERO-TRUST <span className="sep">+</span>{' '}
-            DEVELOPER EXPERIENCE <span className="sep">◆</span>
+            AZURE <span className="sep">+</span> AWS <span className="sep">+</span> AWS CDK{' '}
+            <span className="sep">+</span> IaC <span className="sep">+</span> PLATFORM ENGINEERING{' '}
+            <span className="sep">+</span> FINOPS <span className="sep">+</span> OBSERVABILITY{' '}
+            <span className="sep">+</span> ZERO-TRUST <span className="sep">+</span> DEVELOPER
+            EXPERIENCE <span className="sep">&#9670;</span>
           </span>
         </div>
       </div>

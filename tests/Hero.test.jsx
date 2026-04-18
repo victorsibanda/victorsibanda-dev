@@ -49,6 +49,9 @@ describe('Hero component', () => {
     const ticker = container.querySelector('.ticker-track');
     expect(ticker).toBeInTheDocument();
     expect(ticker.textContent).toContain('AWS');
-    expect(ticker.textContent).toContain('KUBERNETES');
+    expect(ticker.textContent).toContain('AWS CDK');
+    expect(ticker.textContent).toContain('PLATFORM ENGINEERING');
   });
+
+
 });
