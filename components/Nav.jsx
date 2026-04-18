@@ -44,4 +44,3 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
 };
 
 window.Nav = Nav;
-export { Nav };

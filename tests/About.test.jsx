@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { About, Interests } from '../components/About.jsx';
+import '../components/About.jsx';
+const About = global.About;
+const Interests = global.Interests;
 
 describe('About component', () => {
   it('renders the em text from PORTFOLIO', () => {

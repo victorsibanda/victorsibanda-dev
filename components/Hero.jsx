@@ -90,4 +90,3 @@ const Hero = () => {
 };
 
 window.Hero = Hero;
-export { Hero };

@@ -74,4 +74,3 @@ const Interests = () => {
 };
 
 window.Interests = Interests;
-export { About, Interests };

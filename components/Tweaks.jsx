@@ -42,4 +42,3 @@ const Tweaks = ({ editMode, play, setPlay }) => {
 };
 
 window.Tweaks = Tweaks;
-export { Tweaks };

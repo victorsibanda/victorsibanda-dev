@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Tweaks } from '../components/Tweaks.jsx';
+import '../components/Tweaks.jsx';
+const Tweaks = global.Tweaks;
 
 describe('Tweaks component', () => {
   it('renders nothing when editMode is false', () => {

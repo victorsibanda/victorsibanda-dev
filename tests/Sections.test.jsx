@@ -1,5 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import { Certs, Projects, Experience, Contact, Foot } from '../components/Sections.jsx';
+import '../components/Sections.jsx';
+const { Certs, Projects, Experience, Contact, Foot } = global;
 
 describe('Certs component', () => {
   beforeEach(() => {

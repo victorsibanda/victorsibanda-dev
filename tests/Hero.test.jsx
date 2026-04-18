@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { Hero } from '../components/Hero.jsx';
+import '../components/Hero.jsx';
+const Hero = global.Hero;
 
 beforeEach(() => {
   window.scrollTo = vi.fn();

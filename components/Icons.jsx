@@ -238,4 +238,3 @@ const Icon = ({ name, size = 16 }) => {
 };
 
 window.Icon = Icon;
-export { Icon };

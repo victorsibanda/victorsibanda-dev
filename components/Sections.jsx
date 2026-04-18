@@ -278,4 +278,3 @@ const Foot = () => {
 };
 
 window.Foot = Foot;
-export { Certs, Projects, Experience, Contact, Foot };
