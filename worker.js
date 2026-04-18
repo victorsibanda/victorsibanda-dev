@@ -2,15 +2,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // IP allowlist — set MY_IP secret in Cloudflare to restrict access; unset = open
-    const allowedIp = env.MY_IP || '';
-    if (allowedIp) {
-      const ip = request.headers.get('CF-Connecting-IP') || '';
-      if (ip !== allowedIp) {
-        return new Response('Access restricted', { status: 403 });
-      }
-    }
-
     // Credly badge proxy — avoids browser CORS restrictions
     if (url.pathname === '/api/badges') {
       try {
