@@ -868,7 +868,7 @@ p {
 .proj-star {
   position: absolute;
   top: 8px;
-  left: 72px;
+  right: 52px;
   z-index: 2;
   display: inline-flex;
   align-items: center;
