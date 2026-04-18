@@ -45,4 +45,70 @@ describe('Nav component', () => {
     fireEvent.click(container.querySelector('.theme-btn'));
     expect(toggle).toHaveBeenCalledTimes(1);
   });
+
+  describe('hamburger menu', () => {
+    it('renders the hamburger button', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      expect(container.querySelector('.hamburger')).toBeInTheDocument();
+    });
+
+    it('does not show mobile menu by default', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      expect(container.querySelector('.nav-mobile-menu')).not.toBeInTheDocument();
+    });
+
+    it('opens mobile menu when hamburger is clicked', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      fireEvent.click(container.querySelector('.hamburger'));
+      expect(container.querySelector('.nav-mobile-menu')).toBeInTheDocument();
+    });
+
+    it('closes mobile menu when hamburger is clicked again', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      fireEvent.click(container.querySelector('.hamburger'));
+      fireEvent.click(container.querySelector('.hamburger'));
+      expect(container.querySelector('.nav-mobile-menu')).not.toBeInTheDocument();
+    });
+
+    it('mobile menu includes all 7 links including Home', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      fireEvent.click(container.querySelector('.hamburger'));
+      const menu = container.querySelector('.nav-mobile-menu');
+      ['Home', 'About', 'Certs', 'Projects', 'Experience', 'Interests', 'Contact'].forEach(
+        (label) => {
+          expect(menu).toHaveTextContent(label);
+        }
+      );
+    });
+
+    it('closes mobile menu when a link is clicked', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      fireEvent.click(container.querySelector('.hamburger'));
+      const menu = container.querySelector('.nav-mobile-menu');
+      fireEvent.click(menu.querySelector('a'));
+      expect(container.querySelector('.nav-mobile-menu')).not.toBeInTheDocument();
+    });
+
+    it('hamburger has aria-expanded reflecting open state', () => {
+      const { container } = render(
+        <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
+      );
+      const btn = container.querySelector('.hamburger');
+      expect(btn).toHaveAttribute('aria-expanded', 'false');
+      fireEvent.click(btn);
+      expect(btn).toHaveAttribute('aria-expanded', 'true');
+    });
+  });
 });
