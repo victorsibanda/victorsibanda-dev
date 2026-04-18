@@ -4,6 +4,10 @@ workers_dev = true
 preview_urls = true
 main = "worker.js"
 
+[[routes]]
+pattern = "victorsibanda.dev"
+custom_domain = true
+
 [assets]
 directory = "."
 binding = "ASSETS"
