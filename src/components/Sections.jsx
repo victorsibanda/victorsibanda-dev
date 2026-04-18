@@ -44,12 +44,12 @@ export const Certs = () => {
   return (
     <section id="certs">
       <div className="wrap">
-        <div className="section-label">
+        <h2 className="section-label">
           <span className="num">03 /</span>
           <span>Certifications — stamps on the journey</span>
           <span className="bar"></span>
-        </div>
-        <div className="cert-grid">
+        </h2>
+        <div className="cert-grid" aria-live="polite" aria-busy={loading}>
           {loading
             ? // Loading skeleton
               [0, 1, 2].map((i) => (
@@ -126,11 +126,11 @@ export const Projects = () => {
   return (
     <section id="projects">
       <div className="wrap">
-        <div className="section-label">
+        <h2 className="section-label">
           <span className="num">04 /</span>
           <span>Selected projects</span>
           <span className="bar"></span>
-        </div>
+        </h2>
         <div className="proj-list">
           {d.projects.map((p) => (
             <div className="proj" key={p.idx}>
@@ -165,18 +165,18 @@ export const Experience = () => {
   return (
     <section id="experience">
       <div className="wrap">
-        <div className="section-label">
+        <h2 className="section-label">
           <span className="num">05 /</span>
           <span>Experience — the path so far</span>
           <span className="bar"></span>
-        </div>
+        </h2>
         <div className="timeline">
           {d.experience.map((e) => (
             <div className="exp" key={e.title + e.date}>
               <div className="exp-head">
-                <div className="exp-title">
+                <h3 className="exp-title">
                   {e.title} · <span className="co">{e.company}</span>
-                </div>
+                </h3>
                 <div className="exp-date">{e.date}</div>
               </div>
               <p>{e.body}</p>
@@ -201,11 +201,11 @@ export const Contact = () => {
   return (
     <section id="contact">
       <div className="wrap">
-        <div className="section-label">
+        <h2 className="section-label">
           <span className="num">07 /</span>
           <span>Contact — let's build something</span>
           <span className="bar"></span>
-        </div>
+        </h2>
         <div className="contact-card">
           <div>
             <h2>
@@ -239,6 +239,7 @@ export const Contact = () => {
                 href={c.href}
                 target={c.href.startsWith('http') ? '_blank' : undefined}
                 rel="noreferrer"
+                aria-label={c.href.startsWith('http') ? `${c.lbl} (opens in new tab)` : undefined}
               >
                 <div className="left">
                   <div className="icon">

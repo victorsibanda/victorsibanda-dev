@@ -21,7 +21,7 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav" aria-label="Main navigation">
       <a href="#home" className="brand" onClick={(e) => jump(e, 'home')}>
         <span className="dot"></span>
         <span className="name">V.Sibanda</span>
@@ -31,6 +31,7 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
           key={it.id}
           href={`#${it.id}`}
           className={`link ${activeSection === it.id ? 'active' : ''}`}
+          aria-current={activeSection === it.id ? 'page' : undefined}
           onClick={(e) => jump(e, it.id)}
         >
           <span className="num">{it.num}</span>

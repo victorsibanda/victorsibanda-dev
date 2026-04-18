@@ -19,14 +19,16 @@ const Tweaks = ({ editMode, play, setPlay }) => {
         <span style={{ color: 'var(--accent)' }}>●</span>
       </h4>
       <div className="lvl">
-        <span>Playfulness</span>
+        <label htmlFor="playfulness-slider">Playfulness</label>
         <span>{level}</span>
       </div>
       <input
+        id="playfulness-slider"
         type="range"
         min="0"
         max="100"
         value={Math.round(play * 100)}
+        aria-valuetext={level}
         onChange={(e) => setPlay(Number(e.target.value) / 100)}
       />
       <div className="hint">

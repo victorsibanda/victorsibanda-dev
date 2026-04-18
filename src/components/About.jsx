@@ -6,11 +6,11 @@ export const About = () => {
   return (
     <section id="about">
       <div className="wrap">
-        <div className="section-label">
+        <h2 className="section-label">
           <span className="num">02 /</span>
           <span>About — who's behind the keyboard</span>
           <span className="bar"></span>
-        </div>
+        </h2>
         <div className="about-grid">
           <div>
             <p className="about-lead">
@@ -49,11 +49,11 @@ export const Interests = () => {
   return (
     <section id="interests">
       <div className="wrap">
-        <div className="section-label">
+        <h2 className="section-label">
           <span className="num">06 /</span>
           <span>Interests — the stuff that keeps me sharp</span>
           <span className="bar"></span>
-        </div>
+        </h2>
         <div className="tile-grid">
           {d.interests.map((i) => (
             <div className="tile" key={i.title}>

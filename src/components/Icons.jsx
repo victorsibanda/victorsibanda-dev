@@ -232,7 +232,7 @@ const Icon = ({ name, size = 16 }) => {
     ),
   };
   return (
-    <span style={{ display: 'inline-flex', width: size, height: size }}>
+    <span aria-hidden="true" style={{ display: 'inline-flex', width: size, height: size }}>
       {cloneElement(icons[name] || icons.code, { width: size, height: size })}
     </span>
   );
