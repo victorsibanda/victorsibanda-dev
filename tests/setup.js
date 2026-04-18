@@ -3,11 +3,11 @@ import { cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import '../components/Icons.jsx';
+import Icon from '../src/components/Icons.jsx';
 
 global.React = React;
 global.ReactDOM = ReactDOM;
-global.Icon = window.Icon;
+global.Icon = Icon;
 
 global.window.PORTFOLIO = {
   brand: 'V.S',

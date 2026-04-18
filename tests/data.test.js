@@ -1,4 +1,4 @@
-import { PORTFOLIO } from '../data.js';
+import { PORTFOLIO } from '../src/data.js';
 
 describe('PORTFOLIO data shape', () => {
   it('has required top-level string fields', () => {

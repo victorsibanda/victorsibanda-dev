@@ -9,5 +9,5 @@ pattern = "victorsibanda.dev"
 custom_domain = true
 
 [assets]
-directory = "."
+directory = "./dist"
 binding = "ASSETS"

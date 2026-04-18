@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import '../components/Nav.jsx';
-const Nav = global.Nav;
+import Nav from '../src/components/Nav.jsx';
 
 beforeEach(() => {
   document.getElementById = vi.fn().mockReturnValue({

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-const Icon = global.Icon;
+import Icon from '../src/components/Icons.jsx';
 
 describe('Icon component', () => {
   it('renders a span wrapper with correct dimensions', () => {

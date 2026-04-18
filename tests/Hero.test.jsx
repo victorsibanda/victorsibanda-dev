@@ -1,11 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import '../components/Hero.jsx';
-const Hero = global.Hero;
+import Hero from '../src/components/Hero.jsx';
+import { PORTFOLIO } from '../src/data.js';
 
 beforeEach(() => {
   window.scrollTo = vi.fn();
   window.scrollY = 0;
-  window.__resources = undefined;
   document.getElementById = vi.fn().mockReturnValue({
     getBoundingClientRect: () => ({ top: 200 }),
   });
@@ -14,12 +13,12 @@ beforeEach(() => {
 describe('Hero component', () => {
   it('renders the status badge from PORTFOLIO', () => {
     render(<Hero />);
-    expect(screen.getByText(window.PORTFOLIO.status)).toBeInTheDocument();
+    expect(screen.getByText(PORTFOLIO.status)).toBeInTheDocument();
   });
 
   it('renders the tagline from PORTFOLIO', () => {
     render(<Hero />);
-    expect(screen.getByText(window.PORTFOLIO.tagline)).toBeInTheDocument();
+    expect(screen.getByText(PORTFOLIO.tagline)).toBeInTheDocument();
   });
 
   it('renders the "See the work" CTA', () => {
@@ -39,12 +38,6 @@ describe('Hero component', () => {
     expect(img.getAttribute('src')).toContain('headshot');
   });
 
-  it('uses window.__resources.headshot when available', () => {
-    window.__resources = { headshot: 'assets/custom.jpg' };
-    render(<Hero />);
-    expect(screen.getByAltText('Victor Sibanda').getAttribute('src')).toBe('assets/custom.jpg');
-  });
-
   it('renders the ticker track with tech terms', () => {
     const { container } = render(<Hero />);
     const ticker = container.querySelector('.ticker-track');
@@ -53,6 +46,4 @@ describe('Hero component', () => {
     expect(ticker.textContent).toContain('AWS CDK');
     expect(ticker.textContent).toContain('PLATFORM ENGINEERING');
   });
-
-
 });
