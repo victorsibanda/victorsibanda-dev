@@ -866,12 +866,9 @@ p {
 }
 
 .proj-star {
-  position: absolute;
-  top: 8px;
-  right: 52px;
-  z-index: 2;
   display: inline-flex;
   align-items: center;
+  vertical-align: middle;
   gap: 5px;
   background: var(--pink);
   color: #fff;
@@ -882,7 +879,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  pointer-events: none;
+  margin-left: 12px;
 }
 .chip--ai {
   color: var(--pink);

@@ -134,15 +134,17 @@ export const Projects = () => {
         <div className="proj-list">
           {d.projects.map((p) => (
             <div className="proj" key={p.idx}>
-              {p.aiBuilt === true && (
-                <div className="proj-star">
-                  <span>★</span>
-                  <span>this project</span>
-                </div>
-              )}
               <div className="idx">{p.idx}</div>
               <div>
-                <h3>{p.name}</h3>
+                <h3>
+                  {p.name}
+                  {p.aiBuilt === true && (
+                    <span className="proj-star">
+                      <span>★</span>
+                      <span>this project</span>
+                    </span>
+                  )}
+                </h3>
               </div>
               <div>
                 <div className="desc">{p.desc}</div>
