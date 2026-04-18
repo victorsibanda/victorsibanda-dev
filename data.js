@@ -128,6 +128,13 @@ window.PORTFOLIO = {
       desc: 'Built the DevOps foundation from scratch for a React Native mobile application -- repositories, CI/CD pipelines, environments, and security scanning.',
       stack: ['Expo', 'AWS Amplify', 'MobSF', 'Bitbucket Pipelines'],
     },
+    {
+      idx: '05',
+      name: 'Personal Portfolio Site',
+      desc: 'Designed and shipped my own portfolio using React, Bun, and Cloudflare Pages with a Workers proxy for live Credly badge data. Deliberate aesthetic system built from scratch — colour tokens, typography, motion. Deployed with proper cache strategy, security headers, and IP controls. AI-assisted design and copy, human decisions throughout.',
+      stack: ['React', 'Cloudflare Workers', 'Bun', 'Claude'],
+      aiBuilt: true,
+    },
   ],
 
   experience: [
