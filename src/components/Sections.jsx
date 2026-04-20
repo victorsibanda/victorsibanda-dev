@@ -225,8 +225,8 @@ export const Contact = () => {
               or just wanna <em>talk anime?</em>
             </h2>
             <p className="sub">
-              I'm always up for a chat — whether it's a consulting conversation, a collab, or
-              deciding once and for all whether Gear 5 beats Ultra Instinct.
+              I'm always up for a conversation — whether that's a consulting discussion, a
+              collaboration, or just connecting with someone building something worth talking about.
             </p>
             <div style={{ position: 'relative' }}>
               <span

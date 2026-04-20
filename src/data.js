@@ -9,7 +9,7 @@ export const PORTFOLIO = {
   status: 'Available for collaboration and consulting',
 
   about: {
-    lead: "I'm Victor: a cloud platform engineer who designs the infrastructure other engineers build on. I've led production migrations to AWS, cut deployment cycles by 92%, established IaC standards adopted across multiple squads, and coached engineers to certifications. Building toward Solutions Architecture, one migration at a time. Off the clock I'm a husband, a new dad, a gym regular, and a lifelong anime and gaming nerd who still believes in going ",
+    lead: "I'm Victor: a cloud platform engineer who designs the infrastructure other engineers build on. I've led production migrations to AWS, cut deployment cycles by 92%, established IaC standards adopted across multiple squads, and coached engineers to certifications. Building toward Solutions Architecture, one migration at a time. Off the clock I'm a husband, a new dad, a gym regular, and someone who still believes in going ",
     leadEm: 'even further beyond.',
     stats: [
       { k: 'Years in Tech', v: '6', u: '+' },
@@ -36,7 +36,7 @@ export const PORTFOLIO = {
       tag: '03',
       icon: 'anime',
       title: 'Anime',
-      body: 'Shounen runs deep: DBZ, Naruto, Bleach, One Piece. But Tokyo Ghoul hits different when the story gets real.',
+      body: 'Shounen runs deep: DBZ, Naruto, One Piece, Bleach. Tokyo Ghoul hits different.',
     },
     {
       tag: '04',
@@ -48,7 +48,7 @@ export const PORTFOLIO = {
       tag: '05',
       icon: 'family',
       title: 'Family',
-      body: 'Husband and new dad. The real end-boss fight. Love every minute of it.',
+      body: 'Husband and new dad. I love every minute of it.',
     },
     {
       tag: '06',
