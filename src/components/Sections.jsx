@@ -150,7 +150,10 @@ export const Projects = () => {
                 <div className="desc">{p.desc}</div>
                 <div className="stack" style={{ marginTop: 10, justifyContent: 'flex-start' }}>
                   {p.stack.map((s) => (
-                    <span className={`chip${p.aiBuilt === true && s === 'Claude' ? ' chip--ai' : ''}`} key={s}>
+                    <span
+                      className={`chip${p.aiBuilt === true && s === 'Claude' ? ' chip--ai' : ''}`}
+                      key={s}
+                    >
                       {s}
                     </span>
                   ))}
