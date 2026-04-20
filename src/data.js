@@ -176,5 +176,5 @@ export const PORTFOLIO = {
   ],
 
   verse:
-    '"Count it all joy, my brothers, when you meet trials of various kinds, for you know that the testing of your faith produces steadfastness." -- James 1:2-4',
+    '"Count it all joy, my brothers, when you meet trials of various kinds, for you know that the testing of your faith produces steadfastness." - James 1:2-4',
 };
