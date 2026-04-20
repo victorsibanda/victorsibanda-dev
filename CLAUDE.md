@@ -9,12 +9,12 @@ Personal portfolio website deployed as a Cloudflare Worker. It's a React SPA bui
 ## Development
 
 ```bash
-npm install            # First-time setup
-npm run build          # Vite build → outputs to dist/
-npm run format         # Format all JS/JSX with Prettier
-npm run format:check   # Dry-run format check (use in CI)
-npm test               # Run all unit tests once
-npm run test:watch     # Run tests in watch mode
+bun install            # First-time setup
+bun run build          # Vite build → outputs to dist/
+bun run format         # Format all JS/JSX with Prettier
+bun run format:check   # Dry-run format check (use in CI)
+bun run test           # Run all unit tests once
+bun run test:watch     # Run tests in watch mode
 ```
 
 ```bash
