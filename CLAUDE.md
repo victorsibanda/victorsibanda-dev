@@ -13,7 +13,7 @@ bun install            # First-time setup
 bun run build          # Vite build → outputs to dist/
 bun run format         # Format all JS/JSX with Prettier
 bun run format:check   # Dry-run format check (use in CI)
-bun test               # Run all unit tests once
+bun run test           # Run all unit tests once
 bun run test:watch     # Run tests in watch mode
 ```
 
