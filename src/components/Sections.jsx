@@ -46,7 +46,7 @@ export const Certs = () => {
       <div className="wrap">
         <h2 className="section-label">
           <span className="num">03 /</span>
-          <span>Certifications — stamps on the journey</span>
+          <span>Certifications: stamps on the journey</span>
           <span className="bar"></span>
         </h2>
         <div className="cert-grid" aria-live="polite" aria-busy={loading}>
@@ -178,7 +178,7 @@ export const Experience = () => {
       <div className="wrap">
         <h2 className="section-label">
           <span className="num">05 /</span>
-          <span>Experience — the path so far</span>
+          <span>Experience: the path so far</span>
           <span className="bar"></span>
         </h2>
         <div className="timeline">
@@ -214,7 +214,7 @@ export const Contact = () => {
       <div className="wrap">
         <h2 className="section-label">
           <span className="num">07 /</span>
-          <span>Contact — let's build something</span>
+          <span>Contact: let's build something</span>
           <span className="bar"></span>
         </h2>
         <div className="contact-card">
