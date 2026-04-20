@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="92" fill="#0b0d10"/>
+  <text
+    x="256"
+    y="340"
+    text-anchor="middle"
+    font-family="'Space Grotesk', 'Poppins', system-ui, sans-serif"
+    font-weight="700"
+    font-size="272"
+    letter-spacing="-8"
+  >
+    <tspan fill="#eaeef2">V</tspan><tspan fill="#8ac13a">S</tspan>
+  </text>
+</svg>
