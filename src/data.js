@@ -72,25 +72,25 @@ export const PORTFOLIO = {
 
   certs: [
     {
-      name: 'AWS Solutions Architect -- Associate',
+      name: 'AWS Solutions Architect: Associate',
       issuer: 'Amazon Web Services',
       year: '2022',
       short: 'SAA-C03',
     },
     {
-      name: 'AWS Developer -- Associate',
+      name: 'AWS Developer: Associate',
       issuer: 'Amazon Web Services',
       year: '2023',
       short: 'DVA-C02',
     },
     {
-      name: 'AWS SysOps Administrator -- Associate',
+      name: 'AWS SysOps Administrator: Associate',
       issuer: 'Amazon Web Services',
       year: '2023',
       short: 'SOA-C02',
     },
     {
-      name: 'AWS DevOps Engineer -- Professional',
+      name: 'AWS DevOps Engineer: Professional',
       issuer: 'Amazon Web Services',
       year: '2026',
       short: 'DOP-C02',
@@ -107,12 +107,12 @@ export const PORTFOLIO = {
     {
       idx: '01',
       name: 'Legacy Services Cloud Migration',
-      desc: 'Containerised and migrated four on-prem legacy services to AWS using ECS, ECR, and CDK. First migration of its kind at the organisation -- now live in production.',
+      desc: 'Containerised and migrated four on-prem legacy services to AWS using ECS, ECR, and CDK. First migration of its kind at the organisation, now live in production.',
       stack: ['AWS CDK', 'ECS', 'ECR', 'Fargate', 'TypeScript'],
     },
     {
       idx: '02',
-      name: 'DC Exit -- Shared Services Migration',
+      name: 'DC Exit: Shared Services Migration',
       desc: 'Designed and delivered the cloud infrastructure for a data centre exit. Architected networking to connect Dockerised services back to surviving on-prem systems with no significant support.',
       stack: ['AWS CDK', 'ECS', 'Direct Connect', 'VPC', 'TypeScript'],
     },
@@ -125,7 +125,7 @@ export const PORTFOLIO = {
     {
       idx: '04',
       name: 'Mobile DevOps Foundation',
-      desc: 'Built the DevOps foundation from scratch for a React Native mobile application -- repositories, CI/CD pipelines, environments, and security scanning.',
+      desc: 'Built the DevOps foundation from scratch for a React Native mobile application: repositories, CI/CD pipelines, environments, and security scanning.',
       stack: ['Expo', 'AWS Amplify', 'MobSF', 'Bitbucket Pipelines'],
     },
     {
@@ -141,14 +141,14 @@ export const PORTFOLIO = {
     {
       title: 'Senior DevOps Engineer',
       company: 'UK Financial Services Group',
-      date: '2022 -- Present',
+      date: '2022 – Present',
       body: 'Technical lead for cloud migrations across multiple squads. Delivered four production services migrated to AWS ECS Fargate with zero customer downtime, extending CDK reference architecture now adopted organisation-wide. Cut Java pipeline execution time by 30-40% through pipeline modernisation and build image optimisation. Mentored 3 engineers toward career progression, including one AWS certification via 16 weeks of structured coaching.',
       tags: ['AWS CDK', 'ECS', 'Fargate', 'TypeScript', 'Bitbucket Pipelines'],
     },
     {
       title: 'DevOps Engineer',
       company: 'UK Financial Services Group',
-      date: '2020 -- 2022',
+      date: '2020 – 2022',
       body: 'Pioneered CDK adoption as the first engineer to implement CDK Pipelines at the organisation. Built CI/CD from scratch, reducing deployment times from 80 minutes to 6 minutes (92% reduction). Promoted to Senior with three consecutive Extraordinary performance ratings.',
       tags: ['AWS CDK', 'CodeBuild', 'Serverless', 'TypeScript', 'IaC'],
     },
