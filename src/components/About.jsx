@@ -18,7 +18,7 @@ export const About = () => {
               <em>{d.about.leadEm}</em>
             </p>
             <p>
-              I care about the craft — clean abstractions, kind docs, dashboards that tell you what
+              I care about the craft - clean abstractions, kind docs, dashboards that tell you what
               went wrong before you open Slack. I build platforms that make the next engineer's week
               easier, not shinier.
             </p>
@@ -50,7 +50,7 @@ export const Interests = () => {
     <section id="interests">
       <div className="wrap">
         <h2 className="section-label">
-          <span className="num">06 /</span>
+          <span className="num">07 /</span>
           <span>Interests — the stuff that keeps me sharp</span>
           <span className="bar"></span>
         </h2>

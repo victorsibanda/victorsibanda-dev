@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Nav from './components/Nav.jsx';
 import Hero from './components/Hero.jsx';
 import { About, Interests } from './components/About.jsx';
-import { Certs, Projects, Experience, Contact, Foot } from './components/Sections.jsx';
+import { Certs, Projects, Experience, Credentials, Contact, Foot } from './components/Sections.jsx';
 
 export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('vs-theme') || 'dark');
@@ -15,7 +15,16 @@ export default function App() {
 
   // scroll spy
   useEffect(() => {
-    const ids = ['home', 'about', 'certs', 'projects', 'experience', 'interests', 'contact'];
+    const ids = [
+      'home',
+      'about',
+      'certs',
+      'projects',
+      'experience',
+      'credentials',
+      'interests',
+      'contact',
+    ];
     const onScroll = () => {
       const y = window.scrollY + 160;
       let current = 'home';
@@ -65,6 +74,7 @@ export default function App() {
         <Certs />
         <Projects />
         <Experience />
+        <Credentials />
         <Interests />
         <Contact />
         <Foot />

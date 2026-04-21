@@ -67,4 +67,47 @@ describe('PORTFOLIO data shape', () => {
       expect(c).toHaveProperty('icon');
     });
   });
+
+  describe('credentials', () => {
+    it('exposes education, awards, and leadership sub-arrays', () => {
+      expect(PORTFOLIO.credentials).toBeDefined();
+      expect(Array.isArray(PORTFOLIO.credentials.education)).toBe(true);
+      expect(Array.isArray(PORTFOLIO.credentials.awards)).toBe(true);
+      expect(Array.isArray(PORTFOLIO.credentials.leadership)).toBe(true);
+      expect(PORTFOLIO.credentials.education.length).toBeGreaterThan(0);
+      expect(PORTFOLIO.credentials.awards.length).toBeGreaterThan(0);
+      expect(PORTFOLIO.credentials.leadership.length).toBeGreaterThan(0);
+    });
+
+    it('education entries have degree/classification/institution/date', () => {
+      PORTFOLIO.credentials.education.forEach((e) => {
+        expect(typeof e.degree).toBe('string');
+        expect(typeof e.classification).toBe('string');
+        expect(typeof e.institution).toBe('string');
+        expect(typeof e.date).toBe('string');
+        if ('note' in e && e.note !== null) {
+          expect(typeof e.note).toBe('string');
+        }
+      });
+    });
+
+    it('award entries have title/year with optional note', () => {
+      PORTFOLIO.credentials.awards.forEach((a) => {
+        expect(typeof a.title).toBe('string');
+        expect(typeof a.year).toBe('string');
+        expect('note' in a).toBe(true);
+        if (a.note !== null) {
+          expect(typeof a.note).toBe('string');
+        }
+      });
+    });
+
+    it('leadership entries have title/issuer/year', () => {
+      PORTFOLIO.credentials.leadership.forEach((l) => {
+        expect(typeof l.title).toBe('string');
+        expect(typeof l.issuer).toBe('string');
+        expect(typeof l.year).toBe('string');
+      });
+    });
+  });
 });

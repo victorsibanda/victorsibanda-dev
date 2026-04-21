@@ -136,24 +136,13 @@ export const Projects = () => {
             <div className="proj" key={p.idx}>
               <div className="idx">{p.idx}</div>
               <div>
-                <h3>
-                  {p.name}
-                  {p.aiBuilt === true && (
-                    <span className="proj-star">
-                      <span>★</span>
-                      <span>this project</span>
-                    </span>
-                  )}
-                </h3>
+                <h3>{p.name}</h3>
               </div>
               <div>
                 <div className="desc">{p.desc}</div>
                 <div className="stack" style={{ marginTop: 10, justifyContent: 'flex-start' }}>
                   {p.stack.map((s) => (
-                    <span
-                      className={`chip${p.aiBuilt === true && s === 'Claude' ? ' chip--ai' : ''}`}
-                      key={s}
-                    >
+                    <span className="chip" key={s}>
                       {s}
                     </span>
                   ))}
@@ -206,6 +195,58 @@ export const Experience = () => {
   );
 };
 
+// Credentials: education, awards, leadership
+export const Credentials = () => {
+  const d = PORTFOLIO;
+  return (
+    <section id="credentials">
+      <div className="wrap">
+        <h2 className="section-label">
+          <span className="num">06 /</span>
+          <span>Credentials: education, awards, leadership</span>
+          <span className="bar"></span>
+        </h2>
+        <div className="cred-grid">
+          <div className="cred-block">
+            <h3 className="cred-heading">Education</h3>
+            {d.credentials.education.map((e) => (
+              <div className="cred-item" key={e.degree}>
+                <div className="cred-title">{e.degree}</div>
+                <div className="cred-meta">
+                  {e.classification} · {e.institution} · {e.date}
+                </div>
+                {e.note && <div className="cred-note">{e.note}</div>}
+              </div>
+            ))}
+          </div>
+          <div className="cred-block">
+            <h3 className="cred-heading">Awards</h3>
+            {d.credentials.awards.map((a) => (
+              <div className="cred-item" key={`${a.title}-${a.year}`}>
+                <div className="cred-title">
+                  {a.title} <span className="cred-year">{a.year}</span>
+                </div>
+                {a.note && <div className="cred-note">{a.note}</div>}
+              </div>
+            ))}
+          </div>
+          <div className="cred-block">
+            <h3 className="cred-heading">Leadership</h3>
+            {d.credentials.leadership.map((l) => (
+              <div className="cred-item" key={l.title}>
+                <div className="cred-title">{l.title}</div>
+                <div className="cred-meta">
+                  {l.issuer} · {l.year}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // Contact
 export const Contact = () => {
   const d = PORTFOLIO;
@@ -213,7 +254,7 @@ export const Contact = () => {
     <section id="contact">
       <div className="wrap">
         <h2 className="section-label">
-          <span className="num">07 /</span>
+          <span className="num">08 /</span>
           <span>Contact: let's build something</span>
           <span className="bar"></span>
         </h2>

@@ -15,11 +15,13 @@ describe('Nav component', () => {
     expect(screen.getByText('V.Sibanda')).toBeInTheDocument();
   });
 
-  it('renders all 6 navigation links', () => {
+  it('renders all 7 navigation links', () => {
     render(<Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />);
-    ['About', 'Certs', 'Projects', 'Experience', 'Interests', 'Contact'].forEach((label) => {
-      expect(screen.getByText(label)).toBeInTheDocument();
-    });
+    ['About', 'Certs', 'Projects', 'Experience', 'Credentials', 'Interests', 'Contact'].forEach(
+      (label) => {
+        expect(screen.getByText(label)).toBeInTheDocument();
+      }
+    );
   });
 
   it('applies active class to the currently active section link', () => {
@@ -78,17 +80,24 @@ describe('Nav component', () => {
       expect(container.querySelector('.nav-mobile-menu')).not.toBeInTheDocument();
     });
 
-    it('mobile menu includes all 7 links including Home', () => {
+    it('mobile menu includes all 8 links including Home', () => {
       const { container } = render(
         <Nav theme="dark" onToggleTheme={() => {}} activeSection="home" />
       );
       fireEvent.click(container.querySelector('.hamburger'));
       const menu = container.querySelector('.nav-mobile-menu');
-      ['Home', 'About', 'Certs', 'Projects', 'Experience', 'Interests', 'Contact'].forEach(
-        (label) => {
-          expect(menu).toHaveTextContent(label);
-        }
-      );
+      [
+        'Home',
+        'About',
+        'Certs',
+        'Projects',
+        'Experience',
+        'Credentials',
+        'Interests',
+        'Contact',
+      ].forEach((label) => {
+        expect(menu).toHaveTextContent(label);
+      });
     });
 
     it('closes mobile menu when a link is clicked', () => {
