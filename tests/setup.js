@@ -98,6 +98,28 @@ global.window.PORTFOLIO = {
       tags: ['AWS CDK', 'CodeBuild', 'Serverless', 'TypeScript', 'IaC'],
     },
   ],
+  credentials: {
+    education: [
+      {
+        degree: 'BEng Electrical & Electronics Engineering',
+        classification: 'First Class Honours',
+        institution: 'University of Lincoln',
+        date: '2017 – 2019',
+        note: 'School Prize for Most Outstanding Overall Achievement',
+      },
+    ],
+    awards: [
+      { title: 'Innovation Award Winner', year: '2021', note: 'Recognised for CDK Pipelines.' },
+      { title: 'Innovation Award Nominee', year: '2024', note: null },
+    ],
+    leadership: [
+      {
+        title: 'ILM Aspire Recognised Leadership Programme',
+        issuer: 'Institute of Leadership & Management',
+        year: '2026',
+      },
+    ],
+  },
   contact: [
     {
       lbl: 'Email',

@@ -1,5 +1,12 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import { Certs, Projects, Experience, Contact, Foot } from '../src/components/Sections.jsx';
+import {
+  Certs,
+  Projects,
+  Experience,
+  Credentials,
+  Contact,
+  Foot,
+} from '../src/components/Sections.jsx';
 import { PORTFOLIO } from '../src/data.js';
 
 describe('Certs component', () => {
@@ -116,6 +123,29 @@ describe('Experience component', () => {
     render(<Experience />);
     PORTFOLIO.experience[0].tags.forEach((t) => {
       expect(screen.getAllByText(t).length).toBeGreaterThan(0);
+    });
+  });
+});
+
+describe('Credentials component', () => {
+  it('renders all education degrees', () => {
+    render(<Credentials />);
+    PORTFOLIO.credentials.education.forEach((e) => {
+      expect(screen.getByText(e.degree)).toBeInTheDocument();
+    });
+  });
+
+  it('renders all award titles', () => {
+    render(<Credentials />);
+    PORTFOLIO.credentials.awards.forEach((a) => {
+      expect(screen.getAllByText(a.title, { exact: false }).length).toBeGreaterThan(0);
+    });
+  });
+
+  it('renders all leadership titles', () => {
+    render(<Credentials />);
+    PORTFOLIO.credentials.leadership.forEach((l) => {
+      expect(screen.getByText(l.title)).toBeInTheDocument();
     });
   });
 });

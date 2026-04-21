@@ -10,8 +10,9 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
     { id: 'certs', label: 'Certs', num: '03' },
     { id: 'projects', label: 'Projects', num: '04' },
     { id: 'experience', label: 'Experience', num: '05' },
-    { id: 'interests', label: 'Interests', num: '06' },
-    { id: 'contact', label: 'Contact', num: '07' },
+    { id: 'credentials', label: 'Credentials', num: '06' },
+    { id: 'interests', label: 'Interests', num: '07' },
+    { id: 'contact', label: 'Contact', num: '08' },
   ];
 
   const jump = (e, id) => {

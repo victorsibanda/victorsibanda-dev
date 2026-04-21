@@ -50,7 +50,7 @@ export const Interests = () => {
     <section id="interests">
       <div className="wrap">
         <h2 className="section-label">
-          <span className="num">06 /</span>
+          <span className="num">07 /</span>
           <span>Interests — the stuff that keeps me sharp</span>
           <span className="bar"></span>
         </h2>
