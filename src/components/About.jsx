@@ -18,7 +18,7 @@ export const About = () => {
               <em>{d.about.leadEm}</em>
             </p>
             <p>
-              I care about the craft — clean abstractions, kind docs, dashboards that tell you what
+              I care about the craft - clean abstractions, kind docs, dashboards that tell you what
               went wrong before you open Slack. I build platforms that make the next engineer's week
               easier, not shinier.
             </p>

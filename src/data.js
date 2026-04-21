@@ -134,19 +134,6 @@ export const PORTFOLIO = {
       desc: 'Authored the first AI engineering safeguards framework at my current organisation, governing GitHub Copilot and LLM code assistant adoption across engineering teams. Defines conventions, infrastructure patterns, and responsible use guardrails. Shared with engineering leadership to inform organisation-wide LLM governance.',
       stack: ['GitHub Copilot', 'LLM Governance', 'SKILL.md', 'Agentic Patterns'],
     },
-    {
-      idx: '06',
-      name: 'Mobile DevOps Foundation',
-      desc: 'Built the DevOps foundation from scratch for a React Native mobile application: repositories, CI/CD pipelines, environments, and security scanning.',
-      stack: ['Expo', 'AWS Amplify', 'MobSF', 'Bitbucket Pipelines'],
-    },
-    {
-      idx: '07',
-      name: 'Personal Portfolio Site',
-      desc: 'Designed and shipped my own portfolio using React, Bun, and Cloudflare Pages with a Workers proxy for live Credly badge data. Deliberate aesthetic system built from scratch — colour tokens, typography, motion. Deployed with proper cache strategy, security headers, and IP controls. AI-assisted design and copy, human decisions throughout.',
-      stack: ['React', 'Cloudflare Workers', 'Bun', 'Claude'],
-      aiBuilt: true,
-    },
   ],
 
   experience: [
@@ -159,7 +146,7 @@ export const PORTFOLIO = {
     },
     {
       title: 'Senior Platform Engineer',
-      company: 'Kainos Software (UK Home Office)',
+      company: 'UK Public Sector Consultancy · UK Home Office',
       date: 'Feb 2023 – Aug 2023',
       body: 'Embedded within the UK Home Office as platform engineer on GDS-compliant digital services. Redesigned CI/CD architecture using AWS CodePipeline with automated security scanning and compliance gates, reducing build and deployment times by 50 per cent. Designed AWS infrastructure (API Gateway, Lambda, ECS, RDS) for public sector digital services, with security controls appropriate to highly regulated government environments. Set containerisation patterns and AWS standards adopted by distributed teams across the programme.',
       tags: ['AWS CodePipeline', 'API Gateway', 'Lambda', 'ECS', 'RDS', 'GDS'],
