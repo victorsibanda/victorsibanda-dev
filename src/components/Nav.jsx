@@ -49,6 +49,9 @@ const Nav = ({ theme, onToggleTheme, activeSection }) => {
         <button className="theme-btn" onClick={onToggleTheme} aria-label="Toggle theme">
           <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
         </button>
+        <button className="contact-btn" onClick={(e) => jump(e, 'contact')} aria-label="Jump to contact section">
+          Contact me
+        </button>
         <button
           className="hamburger"
           onClick={() => setIsOpen(!isOpen)}
